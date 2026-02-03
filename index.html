@@ -1,1785 +1,462 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="light" lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sublimaciones La Preferida 2012 - Personalización de productos de alta calidad. Camisas, tazas, medias y más.">
-    <meta name="keywords" content="sublimación, personalización, camisas, tazas, medias, termos, Venezuela">
-    <title>Sublimaciones La Preferida 2012 | Personalización Creativa</title>
-
-    <!-- Fuentes Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="La Preferida Sublimaciones - Personalización de camisas, tazas, medias, termos y más. Calidad premium en Venezuela.">
+    <meta name="keywords" content="sublimación, personalización, camisas, tazas, medias, termos, Venezuela, La Preferida">
+    <title>La Preferida Sublimaciones | Catálogo Premium</title>
     
-    <!-- Iconos FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Preconnect para recursos externos -->
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="dns-prefetch" href="https://maps.google.com">
-
-    <style>
-        /* -----------------------------------------------------------
-           VARIABLES Y RESET
-        ----------------------------------------------------------- */
-        :root {
-            --magenta: #E10075;
-            --cyan: #00B7EB;
-            --orange: #FF6B35;
-            --yellow: #FFD166;
-            --white: #FFFFFF;
-            --gray-light: #f8f9fa;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --shadow: 0 4px 15px rgba(0,0,0,0.1);
-            --radius: 12px;
-            --font-title: 'Poppins', sans-serif;
-            --font-body: 'Open Sans', sans-serif;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--text-dark);
-            background-color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            flex: 1;
-        }
-
-        /* -----------------------------------------------------------
-           COMPONENTES UI
-        ----------------------------------------------------------- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-family: var(--font-title);
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-
-        .btn:focus-visible {
-            outline: 2px solid var(--cyan);
-            outline-offset: 2px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--magenta), #c0005c);
-            color: var(--white);
-            box-shadow: 0 4px 10px rgba(225, 0, 117, 0.3);
-        }
-
-        .btn-primary:hover,
-        .btn-primary:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(225, 0, 117, 0.4);
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, var(--cyan), #0091c7);
-            color: var(--white);
-            box-shadow: 0 4px 10px rgba(0, 183, 235, 0.3);
-        }
-
-        .btn-secondary:hover,
-        .btn-secondary:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0, 183, 235, 0.4);
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-        }
-
-        .btn-whatsapp:hover,
-        .btn-whatsapp:focus {
-            background-color: #128C7E;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--gray-light);
-            color: var(--text-light);
-        }
-
-        .btn-outline:hover,
-        .btn-outline:focus {
-            border-color: var(--magenta);
-            color: var(--magenta);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-family: var(--font-title);
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-        }
-
-        .section-title span {
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--magenta), var(--cyan));
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        /* -----------------------------------------------------------
-           HEADER & NAV
-        ----------------------------------------------------------- */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            z-index: 1000;
-            padding: 10px 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-            border-radius: 50%;
-            object-fit: cover;
-            background-color: transparent;
-            transition: var(--transition);
-            aspect-ratio: 1;
-        }
-
-        .logo img:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            padding: 5px 0;
-            position: relative;
-        }
-
-        .nav-link:hover,
-        .nav-link:focus {
-            color: var(--magenta);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--magenta);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover::after,
-        .nav-link:focus::after {
-            width: 100%;
-        }
-
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: var(--text-dark);
-            padding: 8px;
-            transition: var(--transition);
-            border: none;
-            background: none;
-        }
-
-        .cart-icon:hover,
-        .cart-icon:focus {
-            color: var(--magenta);
-            outline: none;
-        }
-
-        .cart-badge {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background-color: #ff3b30;
-            color: white;
-            font-size: 0.7rem;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            border: none;
-            background: none;
-            color: var(--text-dark);
-            padding: 8px;
-        }
-
-        .hamburger:focus-visible {
-            outline: 2px solid var(--cyan);
-            border-radius: 4px;
-        }
-
-        /* -----------------------------------------------------------
-           HERO SECTION
-        ----------------------------------------------------------- */
-        #inicio {
-            padding: 160px 20px 100px;
-            background: linear-gradient(135deg, #fff0f5 0%, #e0f7fa 100%);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-title {
-            font-family: var(--font-title);
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.2;
-            margin-bottom: 20px;
-            background: -webkit-linear-gradient(45deg, var(--magenta), var(--cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .hero-image {
-            margin-top: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-        }
-
-        /* -----------------------------------------------------------
-           PRODUCTOS
-        ----------------------------------------------------------- */
-        #productos {
-            padding: 80px 20px;
-            background-color: var(--white);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            overflow: hidden;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .product-card:hover,
-        .product-card:focus-within {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-
-        .product-img-wrapper {
-            height: 200px;
-            overflow: hidden;
-            background-color: var(--gray-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .product-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .product-card:hover .product-img-wrapper img {
-            transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .product-title {
-            font-family: var(--font-title);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        /* -----------------------------------------------------------
-           PROCESO
-        ----------------------------------------------------------- */
-        #proceso {
-            padding: 80px 20px;
-            background-color: var(--gray-light);
-        }
-
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 0 auto;
-            gap: 30px;
-        }
-
-        .step-card {
-            flex: 1;
-            text-align: center;
-            padding: 30px 20px;
-            background: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .step-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--magenta), var(--cyan));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--white);
-            font-size: 1.5rem;
-        }
-
-        .step-title {
-            font-family: var(--font-title);
-            margin-bottom: 10px;
-            color: var(--magenta);
-        }
-
-        .step-desc {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        /* -----------------------------------------------------------
-           CONTACTO & MAPA
-        ----------------------------------------------------------- */
-        #contacto {
-            padding: 80px 20px;
-            background-color: var(--white);
-        }
-
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            background-color: var(--gray-light);
-            padding: 40px;
-            border-radius: var(--radius);
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            gap: 15px;
-        }
-
-        .info-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(225, 0, 117, 0.1);
-            color: var(--magenta);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-content h4 {
-            font-family: var(--font-title);
-            margin-bottom: 5px;
-        }
-
-        .schedule-badge {
-            display: inline-block;
-            background-color: var(--yellow);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-top: 5px;
-            color: #333;
-        }
-
-        .map-wrapper {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            height: 100%;
-            min-height: 400px;
-            position: relative;
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-            display: block;
-        }
-
-        /* -----------------------------------------------------------
-           FOOTER
-        ----------------------------------------------------------- */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 60px 20px 20px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo img {
-            height: 80px;
-            margin-bottom: 15px;
-            border-radius: 50%;
-            filter: brightness(0) invert(1);
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .footer-logo h3 {
-            font-family: var(--font-title);
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover,
-        .footer-links a:focus {
-            color: var(--cyan);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-link {
-            width: 36px;
-            height: 36px;
-            background-color: rgba(255,255,255,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-link:hover,
-        .social-link:focus {
-            background-color: var(--magenta);
-            transform: translateY(-2px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        /* -----------------------------------------------------------
-           MODAL CARRITO (Side Drawer)
-        ----------------------------------------------------------- */
-        .cart-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-
-        .cart-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .cart-drawer {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 100%;
-            max-width: 400px;
-            height: 100%;
-            background: white;
-            z-index: 2001;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: 0.4s ease-in-out;
-            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-        }
-
-        .cart-drawer.active {
-            right: 0;
-        }
-
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--gray-light);
-            margin-bottom: 20px;
-        }
-
-        .close-cart {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-dark);
-            padding: 5px;
-            transition: var(--transition);
-        }
-
-        .close-cart:hover,
-        .close-cart:focus {
-            color: var(--magenta);
-        }
-
-        .cart-items {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
-
-        .cart-items::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .cart-items::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 3px;
-        }
-
-        .cart-items::-webkit-scrollbar-thumb {
-            background: var(--magenta);
-            border-radius: 3px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .item-details h4 {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
-
-        .item-controls {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .qty-btn {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            border: 1px solid #ddd;
-            background: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .qty-btn:hover,
-        .qty-btn:focus {
-            background-color: var(--gray-light);
-            border-color: var(--magenta);
-        }
-
-        .remove-btn {
-            color: #ff3b30;
-            cursor: pointer;
-            margin-left: 10px;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .remove-btn:hover,
-        .remove-btn:focus {
-            color: #ff0000;
-        }
-
-        .cart-footer {
-            padding-top: 20px;
-            border-top: 1px solid var(--gray-light);
-        }
-
-        .cart-total {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .cart-actions {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 10px;
-        }
-
-        /* -----------------------------------------------------------
-           MODAL WHATSAPP FORM
-        ----------------------------------------------------------- */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.6);
-            z-index: 3000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            padding: 20px;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal-content {
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            width: 100%;
-            max-width: 500px;
-            transform: translateY(20px);
-            transition: 0.3s;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal-overlay.active .modal-content {
-            transform: translateY(0);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--cyan);
-            box-shadow: 0 0 0 3px rgba(0, 183, 235, 0.1);
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-        }
-
-        .checkbox-group input {
-            width: auto;
-        }
-
-        /* -----------------------------------------------------------
-           RESPONSIVE
-        ----------------------------------------------------------- */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .process-steps {
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: white;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                transition: 0.3s;
-                padding-top: 40px;
-                gap: 20px;
-            }
-
-            .nav-menu.active {
-                left: 0;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .process-steps {
-                flex-direction: column;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .cart-drawer {
-                max-width: 100%;
-            }
-
-            .cart-actions {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .contact-info {
-                padding: 20px;
-            }
-            
-            .modal-content {
-                padding: 20px;
-            }
-        }
-
-        /* Animaciones */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Loading state para imágenes */
-        .loading {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite;
-        }
-
-        @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        /* Skip to main content link for accessibility */
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--magenta);
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 0 0 4px 0;
-            z-index: 1001;
-            transition: top 0.3s;
-        }
-
-        .skip-to-content:focus {
-            top: 0;
-        }
-    </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://drive.google.com/thumbnail?id=1zq58PlJIMmQtU19lGpKRrZ_8wMk62PWI" type="image/png">
+    
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25D366",
+                        "accent-gold": "#D4AF37",
+                        "accent-metallic": "#C0C0C0",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="bg-white dark:bg-[#0A0A0A] text-gray-800 dark:text-gray-100 antialiased">
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
 
-    <!-- Header -->
-    <header role="banner">
-        <div class="nav-container">
-            <a href="#" class="logo" aria-label="Sublimaciones La Preferida 2012 - Página de inicio">
-                <!-- Logo circular del negocio -->
-                <img src="https://drive.google.com/thumbnail?id=1zq58PlJIMmQtU19lGpKRrZ_8wMk62PWI" 
-                     alt="Logo de Sublimaciones La Preferida 2012 - Personalización de productos" 
-                     width="60" 
-                     height="60"
-                     loading="eager">
-            </a>
-            
-            <nav aria-label="Navegación principal">
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#productos" class="nav-link">Productos</a></li>
-                    <li><a href="#proceso" class="nav-link">Proceso</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                </ul>
-            </nav>
+    <!-- Header con botón de Catálogo Mega -->
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-[#0A0A0A]/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 px-6 lg:px-10 py-3">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-6">
+            <div class="flex items-center gap-8">
+                <a href="#" class="flex items-center gap-3" aria-label="Inicio - La Preferida Sublimaciones">
+                    <div class="size-8 bg-accent-gold rounded flex items-center justify-center text-black">
+                        <span class="material-symbols-outlined">brush</span>
+                    </div>
+                    <h1 class="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-tight">
+                        La Preferida <span class="text-accent-gold font-light text-sm block">Sublimaciones</span>
+                    </h1>
+                </a>
+                <div class="hidden md:flex flex-1 min-w-80">
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-accent-gold">
+                            <span class="material-symbols-outlined text-[20px]">search</span>
+                        </div>
+                        <input 
+                            id="searchInput"
+                            class="w-full h-10 pl-10 pr-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-[#1a1a1a] text-sm focus:ring-2 focus:ring-accent-gold focus:border-transparent shadow-sm" 
+                            placeholder="Buscar productos personalizados..." 
+                            type="search"
+                            aria-label="Buscar productos"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Botón de Catálogo Mega - NUEVO -->
+                <a href="https://mega.nz/folder/7csnwRQI#RPaYx5G7PqwUX0VUD9zAVw" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="mega-btn-header hidden lg:flex items-center gap-2 px-4 py-2 rounded-lg mega-btn font-semibold text-sm shadow-sm">
+                    <i class="fas fa-download text-xs"></i>
+                    <span>Catálogo Mega</span>
+                </a>
 
-            <div style="display: flex; gap: 15px; align-items: center;">
-                <button class="cart-icon" id="cartIcon" aria-label="Ver carrito de cotización" aria-expanded="false">
-                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                    <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="Menú de navegación" aria-expanded="false">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </button>
+                <nav class="hidden lg:flex items-center gap-6" aria-label="Navegación principal">
+                    <a class="text-sm font-semibold hover:text-accent-gold transition-colors" href="#inicio">Inicio</a>
+                    <a class="text-sm font-semibold hover:text-accent-gold transition-colors" href="#productos">Productos</a>
+                    <a class="text-sm font-semibold hover:text-accent-gold transition-colors" href="#proceso">Proceso</a>
+                    <a class="text-sm font-semibold hover:text-accent-gold transition-colors" href="#contacto">Contacto</a>
+                </nav>
+                <div class="flex gap-3">
+                    <button 
+                        id="cartIcon"
+                        class="flex items-center justify-center size-10 rounded-xl bg-gray-50 dark:bg-[#1a1a1a] shadow-sm hover:bg-accent-gold/20 transition-colors relative border border-gray-300 dark:border-gray-700"
+                        aria-label="Lista de consulta"
+                        aria-expanded="false"
+                    >
+                        <span class="material-symbols-outlined text-[20px]">list</span>
+                        <span id="cartBadge" class="absolute -top-1 -right-1 bg-accent-gold text-black text-xs rounded-full size-5 flex items-center justify-center hidden font-bold">0</span>
+                    </button>
+                    <button class="flex items-center justify-center size-10 rounded-xl bg-primary text-white shadow-lg shadow-primary/20 whatsapp-btn" aria-label="Mi cuenta">
+                        <span class="material-symbols-outlined text-[20px]">person</span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section id="inicio" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <h1 id="hero-title" class="hero-title fade-in">Personalizamos tus ideas con calidad premium</h1>
-                <p class="hero-subtitle fade-in">Desde 2012 transformando tus conceptos en productos únicos y memorables.</p>
-                <div class="hero-buttons fade-in">
-                    <a href="#productos" class="btn btn-primary">Ver Catálogo</a>
-                    <a href="https://wa.me/5842442208597" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Solicitar Cotización</a>
-                </div>
-                <!-- Imagen representativa de calidad -->
-                <img src="https://drive.google.com/thumbnail?id=1-zXSpG-4Pvc1nznVD5MvUnJtMgp74jyz" 
-                     alt="Productos personalizados de sublimación de alta calidad" 
-                     class="hero-image fade-in" 
-                     width="800" 
-                     height="400"
-                     loading="lazy">
-            </div>
-        </section>
-
-        <!-- Productos Section -->
-        <section id="productos" aria-labelledby="productos-title">
-            <div class="section-title fade-in">
-                <h2 id="productos-title">Nuestros Productos Más Populares</h2>
-                <span></span>
-            </div>
-
-            <div class="products-grid" id="productsGrid" role="list">
-                <!-- Los productos se renderizan vía JS -->
-            </div>
-        </section>
-
-        <!-- Proceso Section -->
-        <section id="proceso" aria-labelledby="proceso-title">
-            <div class="section-title fade-in">
-                <h2 id="proceso-title">¿Cómo personalizar tu producto?</h2>
-                <span></span>
-            </div>
-
-            <div class="process-steps">
-                <div class="step-card fade-in" role="listitem">
-                    <div class="step-icon">
-                        <i class="fas fa-mouse-pointer" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="step-title">1. Elige</h3>
-                    <p class="step-desc">Selecciona el producto que deseas personalizar de nuestro catálogo.</p>
-                </div>
-                <div class="step-card fade-in" role="listitem">
-                    <div class="step-icon">
-                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="step-title">2. Diseña</h3>
-                    <p class="step-desc">Envía tu diseño o déjanos crear uno único y especial para ti.</p>
-                </div>
-                <div class="step-card fade-in" role="listitem">
-                    <div class="step-icon">
-                        <i class="fas fa-box-open" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="step-title">3. Recibe</h3>
-                    <p class="step-desc">Tu producto listo para entrega en 3-5 días hábiles.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto Section -->
-        <section id="contacto" aria-labelledby="contacto-title">
-            <div class="section-title fade-in">
-                <h2 id="contacto-title">Visítanos o Escríbenos</h2>
-                <span></span>
-            </div>
-
-            <div class="contact-container">
-                <!-- Info -->
-                <div class="contact-info fade-in">
-                    <h3>Información de Contacto</h3>
-                    <br>
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-                        <div class="info-content">
-                            <h4>Ubicación</h4>
-                            <p>Comercial La Preferida 2012 C.A.</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
-                        <div class="info-content">
-                            <h4>Horario de Atención</h4>
-                            <div class="schedule-badge">Martes: 8:00 AM - 7:00 PM</div>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
-                        <div class="info-content">
-                            <h4>Teléfono / WhatsApp</h4>
-                            <p>0424-220-8597</p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 30px;">
-                        <a href="https://wa.me/5842442208597" class="btn btn-whatsapp" style="width: 100%;" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Escribir por WhatsApp
+    <main id="main-content" class="max-w-[1440px] mx-auto px-6 lg:px-10 py-8">
+        <!-- Hero Section con botón Mega -->
+        <section id="inicio" class="mb-12 group overflow-hidden rounded-2xl relative">
+            <div class="h-72 w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%), url('https://drive.google.com/thumbnail?id=1-zXSpG-4Pvc1nznVD5MvUnJtMgp74jyz');">
+                <div class="h-full flex flex-col justify-center px-8 md:px-12 text-white">
+                    <span class="inline-block px-3 py-1 bg-accent-gold text-black text-[10px] font-bold uppercase tracking-widest rounded-full mb-4 w-max">Calidad Premium</span>
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-4 leading-tight">Personalizamos tus ideas<br/><span class="text-accent-gold font-light">con calidad premium</span></h2>
+                    <p class="max-w-md text-gray-300 text-base lg:text-lg mb-6">Transformamos tus conceptos en productos únicos y memorables.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 flex-wrap">
+                        <a href="#productos" class="inline-flex justify-center bg-accent-gold hover:bg-yellow-500 text-black font-bold px-6 py-3 rounded-xl transition-all shadow-lg mega-btn">
+                            Ver Catálogo Online
+                        </a>
+                        <a href="https://mega.nz/folder/7csnwRQI#RPaYx5G7PqwUX0VUD9zAVw" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="inline-flex justify-center items-center gap-2 bg-accent-metallic hover:bg-gray-300 text-black font-bold px-6 py-3 rounded-xl transition-all shadow-lg mega-btn">
+                            <i class="fas fa-file-download"></i>
+                            Catálogo Completo (Mega)
+                        </a>
+                        <a href="https://wa.me/5842442208597" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 bg-white hover:bg-gray-100 text-black font-bold px-6 py-3 rounded-xl transition-all shadow-lg whatsapp-btn">
+                            <i class="fab fa-whatsapp text-primary"></i>
+                            Consultar por WhatsApp
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Mapa -->
-                <div class="map-wrapper fade-in">
-                    <!-- Iframe de búsqueda genérico para el negocio -->
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Comercial%20La%20Preferida%202012%20C.A.&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        title="Mapa de ubicación de Sublimaciones La Preferida 2012"
-                        loading="lazy">
-                    </iframe>
+        <!-- Search & Filter -->
+        <div class="mb-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+                <div class="flex gap-4 items-center">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Nuestros Productos</h3>
+                    <div class="md:hidden">
+                        <button id="filterToggle" class="p-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#1a1a1a]">
+                            <span class="material-symbols-outlined">filter_list</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 pointer-events-none">search</span>
+                        <input 
+                            id="searchInputMobile"
+                            type="text" 
+                            placeholder="Buscar productos..." 
+                            class="pl-10 pr-4 py-2.5 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1a1a1a] focus:ring-2 focus:ring-accent-gold focus:border-transparent w-full md:w-64"
+                        >
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Filters -->
+            <div id="categoryFilters" class="hidden md:flex gap-3 overflow-x-auto pb-4 mb-6">
+                <button class="category-filter px-4 py-2 rounded-full bg-accent-gold text-black font-semibold active" data-category="all">
+                    Todos
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="camisas">
+                    Camisas
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="tazas">
+                    Tazas
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="boxers">
+                    Boxers
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="medias">
+                    Medias
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="termos">
+                    Termos
+                </button>
+                <button class="category-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-[#1a1a1a] hover:bg-accent-gold/10 font-semibold" data-category="popsockets">
+                    Popsockets
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <section id="productos" class="mb-16">
+            <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Los productos se cargarán dinámicamente aquí -->
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingProducts" class="text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-accent-gold mb-4"></div>
+                <p class="text-gray-500">Cargando productos...</p>
+            </div>
+            
+            <!-- Empty State -->
+            <div id="emptyProducts" class="hidden text-center py-12">
+                <span class="material-symbols-outlined text-6xl text-gray-300 mb-4">search_off</span>
+                <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">No se encontraron productos</h3>
+                <p class="text-gray-500">Intenta con otros términos de búsqueda</p>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="proceso" class="mb-16 bg-gradient-to-r from-accent-gold/5 to-primary/5 rounded-3xl p-8 md:p-12 border border-accent-gold/20">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">¿Cómo funciona nuestro proceso?</h2>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">3 sencillos pasos para tener tu producto personalizado</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="size-20 bg-white dark:bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-accent-gold mx-auto mb-6 shadow-lg border border-accent-gold/20">
+                        <span class="material-symbols-outlined text-[40px]">mouse</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">1. Elige tu Producto</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Selecciona el producto que deseas personalizar de nuestro catálogo.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="size-20 bg-white dark:bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-primary mx-auto mb-6 shadow-lg border border-primary/20">
+                        <span class="material-symbols-outlined text-[40px]">design_services</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">2. Envía tu Diseño</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Comparte tu diseño o déjanos crear uno único y especial para ti.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="size-20 bg-white dark:bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-accent-metallic mx-auto mb-6 shadow-lg border border-accent-metallic/20">
+                        <span class="material-symbols-outlined text-[40px]">local_shipping</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">3. Recibe en Casa</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Tu producto listo para entrega en 3-5 días hábiles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Contáctanos</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0 border border-primary/20">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1 text-gray-900 dark:text-white">WhatsApp / Teléfono</h3>
+                                <p class="text-gray-600 dark:text-gray-300">0424-220-8597</p>
+                                <a href="https://wa.me/5842442208597" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-primary font-semibold hover:underline">
+                                    Enviar mensaje →
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold flex-shrink-0 border border-accent-gold/20">
+                                <span class="material-symbols-outlined">schedule</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1 text-gray-900 dark:text-white">Horario de Atención</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Martes: 8:00 AM - 7:00 PM</p>
+                                <span class="inline-block mt-2 px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-bold rounded-full">
+                                    Horario Especial
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="size-12 bg-accent-gold/10 rounded-xl flex items-center justify-center text-accent-gold flex-shrink-0 border border-accent-gold/20">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1 text-gray-900 dark:text-white">Ubicación</h3>
+                                <p class="text-gray-600 dark:text-gray-300">Comercial La Preferida</p>
+                                <a href="https://maps.app.goo.gl/p38Q9K4NACXtRibg6" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-accent-gold font-semibold hover:underline">
+                                    Ver en Google Maps →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-[#1a1a1a] rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-800">
+                    <h3 class="text-xl font-bold mb-6 text-gray-900 dark:text-white">Envíanos un mensaje</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="name">Nombre *</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="message">Mensaje *</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-primary hover:bg-[#128C7E] text-white font-bold rounded-lg transition-colors whatsapp-btn">
+                            Enviar Mensaje
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <!-- Logo circular del negocio -->
-                <img src="https://drive.google.com/thumbnail?id=1zq58PlJIMmQtU19lGpKRrZ_8wMk62PWI" 
-                     alt="Logo de Sublimaciones La Preferida 2012" 
-                     width="80" 
-                     height="80"
-                     loading="lazy">
-                <h3>Calidad desde 2012</h3>
-            </div>
-            <div class="footer-links">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#proceso">Proceso</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#" aria-label="Términos y condiciones">Términos y Condiciones</a></li>
-                    <li><a href="#" aria-label="Política de privacidad">Política de Privacidad</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Síguenos</h4>
-                <div class="social-icons">
-                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                    <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+    <!-- Footer con enlace Mega -->
+    <footer class="bg-white dark:bg-[#0a0a0a] py-12 px-6 lg:px-10 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-8 bg-accent-gold rounded flex items-center justify-center text-black">
+                            <span class="material-symbols-outlined">brush</span>
+                        </div>
+                        <h1 class="text-gray-900 dark:text-white text-xl font-bold leading-tight">La Preferida Sublimaciones</h1>
+                    </div>
+                    <p class="text-gray-500 text-sm max-w-sm mb-6 leading-relaxed">
+                        Tu destino para personalización premium. Calidad que se siente, diseños inolvidables.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="size-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:bg-accent-gold/10 transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram text-[20px]"></i>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:bg-accent-gold/10 transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-[20px]"></i>
+                        </a>
+                        <a href="#" class="size-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:bg-accent-gold/10 transition-colors" aria-label="TikTok">
+                            <i class="fab fa-tiktok text-[20px]"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 text-gray-900 dark:text-white">Catálogo</h5>
+                    <ul class="flex flex-col gap-4 text-sm text-gray-500">
+                        <li><a href="#productos" class="hover:text-accent-gold transition-colors">Nuevos Ingresos</a></li>
+                        <!-- Enlace al Catálogo Mega en el Footer - NUEVO -->
+                        <li><a href="https://mega.nz/folder/7csnwRQI#RPaYx5G7PqwUX0VUD9zAVw" target="_blank" rel="noopener noreferrer" class="hover:text-accent-gold transition-colors font-medium">
+                            <i class="fas fa-external-link-alt mr-1 text-xs"></i> Catálogo Completo (Mega)
+                        </a></li>
+                        <li><a href="#productos" class="hover:text-accent-gold transition-colors">Cerámica Personalizada</a></li>
+                        <li><a href="#contacto" class="hover:text-accent-gold transition-colors">Ventas Mayoristas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-6 text-gray-900 dark:text-white">Soporte</h5>
+                    <ul class="flex flex-col gap-4 text-sm text-gray-500">
+                        <li><a href="#contacto" class="hover:text-accent-gold transition-colors">Envíos</a></li>
+                        <li><a href="#proceso" class="hover:text-accent-gold transition-colors">Cuidado de Productos</a></li>
+                        <li><a href="#contacto" class="hover:text-accent-gold transition-colors">Contacto</a></li>
+                        <li><a href="#" class="hover:text-accent-gold transition-colors">Preguntas Frecuentes</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="copyright">
-            <p>© 2012-2024 Sublimaciones La Preferida. Todos los derechos reservados.</p>
-            <span style="font-size: 0.8rem; display: block; margin-top: 5px;">Página web segura - 100% Responsive</span>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <p>© La Preferida Sublimaciones. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-accent-gold transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-accent-gold transition-colors">Términos de Servicio</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Modal Carrito -->
-    <div class="cart-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
-        <div class="cart-drawer" id="cartDrawer">
-            <div class="cart-header">
-                <h3 id="cart-title">Tu Cotización</h3>
-                <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="cart-items" id="cartItemsContainer" role="list">
-                <!-- Items del carrito -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span>Total de productos:</span>
-                    <span id="cartTotalItems" aria-live="polite">0</span>
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-[100] hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/50" id="cartOverlay"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white dark:bg-[#1a1a1a] shadow-xl transform transition-transform duration-300 translate-x-full" id="cartDrawer">
+            <div class="h-full flex flex-col">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-800">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white">Tu Lista de Consulta</h3>
+                        <button id="closeCart" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" aria-label="Cerrar lista">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="cart-actions">
-                    <button class="btn btn-outline" id="emptyCartBtn">Vaciar</button>
-                    <button class="btn btn-whatsapp" id="whatsappBtn">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Continuar por WhatsApp
+                <div class="flex-1 overflow-y-auto p-6 custom-scroll" id="cartItems">
+                    <!-- Cart items will be inserted here -->
+                </div>
+                <div class="p-6 border-t border-gray-200 dark:border-gray-800">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-bold text-gray-900 dark:text-white">Total de productos:</span>
+                        <span id="cartTotal" class="font-bold text-accent-gold">0</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <button id="clearCart" class="flex-1 py-3 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-[#222] transition-colors text-gray-700 dark:text-gray-300">
+                            Vaciar Lista
+                        </button>
+                        <button id="checkoutBtn" class="flex-1 py-3 bg-primary text-white rounded-lg hover:bg-[#128C7E] transition-colors flex items-center justify-center gap-2 whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Data Modal -->
+    <div id="customerModal" class="fixed inset-0 z-[110] hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/50" id="customerOverlay"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-white dark:bg-[#1a1a1a] rounded-2xl w-full max-w-md p-6 max-h-[90vh] overflow-y-auto border border-accent-gold/20">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Tus Datos</h3>
+                    <button id="closeCustomerModal" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" aria-label="Cerrar formulario">
+                        <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
+                <form id="customerForm">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="customerName">Nombre Completo *</label>
+                            <input type="text" id="customerName" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white" placeholder="Juan Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="customerPhone">Teléfono *</label>
+                            <input type="tel" id="customerPhone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white" placeholder="0424-220-8597">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="customerEmail">Correo Electrónico</label>
+                            <input type="email" id="customerEmail" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white" placeholder="juan@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300" for="customerAddress">Dirección de Entrega</label>
+                            <textarea id="customerAddress" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-accent-gold focus:border-transparent text-gray-900 dark:text-white" placeholder="Av. Principal, casa #1..."></textarea>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" id="acceptTerms" required class="mt-1 mr-2 accent-accent-gold">
+                            <label for="acceptTerms" class="text-sm text-gray-600 dark:text-gray-300">
+                                Acepto que me contacten por WhatsApp para consultar sobre los productos
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full mt-6 py-3 bg-primary hover:bg-[#128C7E] text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Enviar Consulta
+                    </button>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- Modal Formulario Datos Cliente -->
-    <div class="modal-overlay" id="dataModalOverlay" role="dialog" aria-modal="true" aria-labelledby="data-modal-title" aria-hidden="true">
-        <div class="modal-content">
-            <div class="cart-header" style="padding-bottom: 10px;">
-                <h3 id="data-modal-title">Tus Datos</h3>
-                <button class="close-cart" id="closeDataModal" aria-label="Cerrar formulario">
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </div>
-            <form id="whatsappForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" required placeholder="Ej: Juan Pérez" aria-required="true">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono de Contacto *</label>
-                    <input type="tel" id="telefono" required placeholder="Ej: 0414-000-0000" aria-required="true">
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico (Opcional)</label>
-                    <input type="email" id="email" placeholder="Ej: juan@email.com">
-                </div>
-                <div class="form-group">
-                    <label for="direccion">Dirección de Entrega (Opcional)</label>
-                    <textarea id="direccion" rows="2" placeholder="Ej: Av. Principal, casa #1..."></textarea>
-                </div>
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="acceptContact" required aria-required="true">
-                    <label for="acceptContact" style="margin:0; font-weight: normal;">Acepto que me contacten por WhatsApp</label>
-                </div>
-                <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;">
-                    Enviar Cotización
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- JavaScript Logic -->
-    <script>
-        // -------------------------------------------------------------
-        // DATOS DE PRODUCTOS CON IMÁGENES REALES DEL NEGOCIO
-        // -------------------------------------------------------------
-        const productos = [
-            {
-                id: 1,
-                nombre: "Camisas Personalizadas",
-                icono: "fa-tshirt",
-                desc: "Camisas de alta calidad con diseños vibrantes y duraderos.",
-                img: "https://drive.google.com/thumbnail?id=1BRyZetw8IAGzOqP-v_pmzM0lbHKtDLuD",
-                precio: "Consultar"
-            },
-            {
-                id: 2,
-                nombre: "Tazas de Cerámica",
-                icono: "fa-mug-hot",
-                desc: "Tazas ideales para regalar, personalizadas con tus fotos.",
-                img: "https://drive.google.com/thumbnail?id=1zXSpG-4Pvc1nznVD5MvUnJtMgp74jyz",
-                precio: "Consultar"
-            },
-            {
-                id: 3,
-                nombre: "Medias Estampadas",
-                icono: "fa-socks",
-                desc: "Diseños divertidos y originales para tus medias personalizadas.",
-                img: "https://drive.google.com/thumbnail?id=1cv7s53iVJiqnTSI9ugzWq19CilbDg1Z3",
-                precio: "Consultar"
-            },
-            {
-                id: 4,
-                nombre: "Termos Aislantes",
-                icono: "fa-wine-bottle",
-                desc: "Mantén tus bebidas a la temperatura perfecta con estilo.",
-                img: "https://drive.google.com/thumbnail?id=1apKjYQ-9llW0FqTJKzSjic4lyVbS71we",
-                precio: "Consultar"
-            }
-        ];
-
-        // -------------------------------------------------------------
-        // CLASE CARRITO MEJORADA
-        // -------------------------------------------------------------
-        class Carrito {
-            constructor() {
-                this.items = this.cargarCarrito();
-                this.render();
-                this.inicializarEventosAccesibilidad();
-            }
-
-            cargarCarrito() {
-                try {
-                    const carritoGuardado = localStorage.getItem('carrito');
-                    return carritoGuardado ? JSON.parse(carritoGuardado) : [];
-                } catch (error) {
-                    console.error('Error al cargar el carrito:', error);
-                    return [];
-                }
-            }
-
-            guardarCarrito() {
-                try {
-                    localStorage.setItem('carrito', JSON.stringify(this.items));
-                } catch (error) {
-                    console.error('Error al guardar el carrito:', error);
-                }
-            }
-
-            agregar(producto) {
-                const existente = this.items.find(item => item.id === producto.id);
-                if (existente) {
-                    existente.cantidad++;
-                } else {
-                    this.items.push({ ...producto, cantidad: 1 });
-                }
-                this.guardarCarrito();
-                this.render();
-                this.mostrarNotificacion(`${producto.nombre} agregado al carrito`);
-                this.abrir();
-            }
-
-            eliminar(id) {
-                const producto = this.items.find(item => item.id === id);
-                this.items = this.items.filter(item => item.id !== id);
-                this.guardarCarrito();
-                this.render();
-                if (producto) {
-                    this.mostrarNotificacion(`${producto.nombre} eliminado del carrito`);
-                }
-            }
-
-            actualizarCantidad(id, cambio) {
-                const item = this.items.find(item => item.id === id);
-                if (item) {
-                    item.cantidad += cambio;
-                    if (item.cantidad < 1) {
-                        this.eliminar(id);
-                        return;
-                    }
-                    this.guardarCarrito();
-                    this.render();
-                }
-            }
-
-            vaciar() {
-                if (this.items.length > 0) {
-                    if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
-                        this.items = [];
-                        this.guardarCarrito();
-                        this.render();
-                        this.mostrarNotificacion('Carrito vaciado');
-                    }
-                }
-            }
-
-            totalProductos() {
-                return this.items.reduce((total, item) => total + item.cantidad, 0);
-            }
-
-            render() {
-                const container = document.getElementById('cartItemsContainer');
-                const badge = document.getElementById('cartBadge');
-                const totalDisplay = document.getElementById('cartTotalItems');
-                const cartIcon = document.getElementById('cartIcon');
-                
-                // Actualizar badge
-                const total = this.totalProductos();
-                badge.textContent = total;
-                badge.style.display = total > 0 ? 'flex' : 'none';
-                totalDisplay.textContent = total;
-                
-                // Actualizar aria-label del icono del carrito
-                cartIcon.setAttribute('aria-label', `Ver carrito de cotización (${total} productos)`);
-
-                // Renderizar items
-                if (this.items.length === 0) {
-                    container.innerHTML = '<p style="text-align:center; color:#999; margin-top:20px;" aria-live="polite">Tu cotización está vacía.</p>';
-                } else {
-                    let html = '';
-                    this.items.forEach(item => {
-                        html += `
-                            <div class="cart-item" role="listitem">
-                                <div class="item-details">
-                                    <h4>${this.escapeHTML(item.nombre)}</h4>
-                                    <small>Sublimación Premium</small>
-                                </div>
-                                <div class="item-controls">
-                                    <button class="qty-btn" onclick="carrito.actualizarCantidad(${item.id}, -1)" aria-label="Reducir cantidad">-</button>
-                                    <span aria-label="${item.cantidad} unidades">${item.cantidad}</span>
-                                    <button class="qty-btn" onclick="carrito.actualizarCantidad(${item.id}, 1)" aria-label="Aumentar cantidad">+</button>
-                                    <button class="remove-btn" onclick="carrito.eliminar(${item.id})" aria-label="Eliminar producto">
-                                        <i class="fas fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        `;
-                    });
-                    container.innerHTML = html;
-                }
-            }
-
-            abrir() {
-                const overlay = document.getElementById('cartOverlay');
-                const drawer = document.getElementById('cartDrawer');
-                overlay.classList.add('active');
-                drawer.classList.add('active');
-                overlay.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-                
-                // Enfocar el primer elemento del carrito
-                setTimeout(() => {
-                    const closeBtn = document.getElementById('closeCart');
-                    closeBtn.focus();
-                }, 100);
-            }
-
-            cerrar() {
-                const overlay = document.getElementById('cartOverlay');
-                const drawer = document.getElementById('cartDrawer');
-                overlay.classList.remove('active');
-                drawer.classList.remove('active');
-                overlay.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-                
-                // Enfocar el icono del carrito
-                document.getElementById('cartIcon').focus();
-            }
-
-            mostrarNotificacion(mensaje) {
-                // Crear notificación toast
-                const toast = document.createElement('div');
-                toast.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: var(--magenta);
-                    color: white;
-                    padding: 12px 20px;
-                    border-radius: var(--radius);
-                    box-shadow: var(--shadow);
-                    z-index: 9999;
-                    transform: translateY(-100px);
-                    opacity: 0;
-                    transition: transform 0.3s, opacity 0.3s;
-                    font-weight: 600;
-                `;
-                toast.textContent = mensaje;
-                toast.setAttribute('role', 'alert');
-                toast.setAttribute('aria-live', 'assertive');
-                
-                document.body.appendChild(toast);
-                
-                // Animación de entrada
-                setTimeout(() => {
-                    toast.style.transform = 'translateY(0)';
-                    toast.style.opacity = '1';
-                }, 10);
-                
-                // Remover después de 3 segundos
-                setTimeout(() => {
-                    toast.style.transform = 'translateY(-100px)';
-                    toast.style.opacity = '0';
-                    setTimeout(() => {
-                        if (toast.parentNode) {
-                            toast.parentNode.removeChild(toast);
-                        }
-                    }, 300);
-                }, 3000);
-            }
-
-            escapeHTML(text) {
-                const div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            }
-
-            inicializarEventosAccesibilidad() {
-                // Manejar teclado en el carrito
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape') {
-                        this.cerrar();
-                        const dataModal = document.getElementById('dataModalOverlay');
-                        if (dataModal.classList.contains('active')) {
-                            dataModal.classList.remove('active');
-                            dataModal.setAttribute('aria-hidden', 'true');
-                        }
-                    }
-                });
-            }
-        }
-
-        // Inicializar Carrito
-        const carrito = new Carrito();
-
-        // -------------------------------------------------------------
-        // RENDERIZAR PRODUCTOS EN HTML CON IMÁGENES REALES
-        // -------------------------------------------------------------
-        function renderizarProductos() {
-            const grid = document.getElementById('productsGrid');
-            if (!grid) return;
-
-            let html = '';
-            productos.forEach(p => {
-                html += `
-                    <article class="product-card fade-in" role="listitem">
-                        <div class="product-img-wrapper">
-                            <img src="${p.img}" 
-                                 alt="${p.nombre} - ${p.desc}" 
-                                 loading="lazy"
-                                 width="250"
-                                 height="200"
-                                 onerror="this.src='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=500&q=80'">
-                        </div>
-                        <div class="product-info">
-                            <div>
-                                <h3 class="product-title">
-                                    <i class="fas ${p.icono}" style="color:var(--magenta)" aria-hidden="true"></i> 
-                                    ${p.nombre}
-                                </h3>
-                                <p class="product-desc">${p.desc}</p>
-                            </div>
-                            <button class="btn btn-outline agregar-carrito-btn" 
-                                    onclick="agregarAlCarrito(${p.id})" 
-                                    data-product-id="${p.id}"
-                                    aria-label="Agregar ${p.nombre} al carrito">
-                                <i class="fas fa-cart-plus" aria-hidden="true"></i> Agregar al carrito
-                            </button>
-                        </div>
-                    </article>
-                `;
-            });
-            grid.innerHTML = html;
-        }
-
-        function agregarAlCarrito(id) {
-            const producto = productos.find(p => p.id === id);
-            if (producto) {
-                carrito.agregar(producto);
-            }
-        }
-
-        // -------------------------------------------------------------
-        // INTERACCIÓN UI & EVENTOS
-        // -------------------------------------------------------------
-        
-        // Menú Hamburguesa
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', () => {
-                const isActive = navMenu.classList.toggle('active');
-                hamburger.setAttribute('aria-expanded', isActive);
-                hamburger.innerHTML = isActive 
-                    ? '<i class="fas fa-times" aria-hidden="true"></i>' 
-                    : '<i class="fas fa-bars" aria-hidden="true"></i>';
-            });
-
-            hamburger.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    hamburger.click();
-                }
-            });
-        }
-
-        // Cerrar menú al hacer click en enlace
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navMenu) {
-                    navMenu.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    hamburger.innerHTML = '<i class="fas fa-bars" aria-hidden="true"></i>';
-                }
-            });
-        });
-
-        // Modal Carrito
-        const cartIcon = document.getElementById('cartIcon');
-        const closeCart = document.getElementById('closeCart');
-        const cartOverlay = document.getElementById('cartOverlay');
-        const emptyCartBtn = document.getElementById('emptyCartBtn');
-
-        if (cartIcon) {
-            cartIcon.addEventListener('click', () => carrito.abrir());
-            cartIcon.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    carrito.abrir();
-                }
-            });
-        }
-
-        if (closeCart) {
-            closeCart.addEventListener('click', () => carrito.cerrar());
-        }
-
-        if (cartOverlay) {
-            cartOverlay.addEventListener('click', (e) => {
-                if (e.target === cartOverlay) carrito.cerrar();
-            });
-        }
-
-        if (emptyCartBtn) {
-            emptyCartBtn.addEventListener('click', () => carrito.vaciar());
-        }
-
-        // Scroll Animation (Intersection Observer)
-        function initScrollAnimation() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { 
-                threshold: 0.1,
-                rootMargin: '50px'
-            });
-
-            document.querySelectorAll('.fade-in').forEach(el => {
-                if (!el.classList.contains('visible')) {
-                    observer.observe(el);
-                }
-            });
-        }
-
-        // -------------------------------------------------------------
-        // LÓGICA DE WHATSAPP MEJORADA
-        // -------------------------------------------------------------
-        const whatsappBtn = document.getElementById('whatsappBtn');
-        const dataModalOverlay = document.getElementById('dataModalOverlay');
-        const closeDataModal = document.getElementById('closeDataModal');
-        const whatsappForm = document.getElementById('whatsappForm');
-
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', () => {
-                if (carrito.totalProductos() === 0) {
-                    carrito.mostrarNotificacion("Agrega productos antes de solicitar la cotización.");
-                    return;
-                }
-                carrito.cerrar();
-                dataModalOverlay.classList.add('active');
-                dataModalOverlay.setAttribute('aria-hidden', 'false');
-                
-                // Enfocar el primer campo del formulario
-                setTimeout(() => {
-                    document.getElementById('nombre').focus();
-                }, 100);
-            });
-        }
-
-        if (closeDataModal) {
-            closeDataModal.addEventListener('click', () => {
-                dataModalOverlay.classList.remove('active');
-                dataModalOverlay.setAttribute('aria-hidden', 'true');
-            });
-        }
-
-        if (dataModalOverlay) {
-            dataModalOverlay.addEventListener('click', (e) => {
-                if (e.target === dataModalOverlay) {
-                    dataModalOverlay.classList.remove('active');
-                    dataModalOverlay.setAttribute('aria-hidden', 'true');
-                }
-            });
-        }
-
-        if (whatsappForm) {
-            whatsappForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                // Validación básica
-                const nombre = document.getElementById('nombre').value.trim();
-                const telefono = document.getElementById('telefono').value.trim();
-                
-                if (!nombre || !telefono) {
-                    carrito.mostrarNotificacion("Por favor completa los campos obligatorios.");
-                    return;
-                }
-
-                const email = document.getElementById('email').value.trim() || "No proporcionado";
-                const direccion = document.getElementById('direccion').value.trim() || "No proporcionada";
-
-                // Construir lista de productos
-                let productosTexto = "";
-                carrito.items.forEach(item => {
-                    productosTexto += `• ${item.nombre}: ${item.cantidad} unidades\n`;
-                });
-
-                // Construir mensaje
-                const fecha = new Date().toLocaleDateString('es-ES', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                    hour: '2-digit',
-                    minute: '2-digit'
-                });
-
-                const mensaje = `¡Hola! Solicito cotización de productos personalizados:
-
-📋 **PRODUCTOS SELECCIONADOS:**
-${productosTexto}
-📞 **MIS DATOS:**
-Nombre: ${nombre}
-Teléfono: ${telefono}
-Email: ${email}
-Dirección: ${direccion}
-
-📅 *Solicitud realizada el ${fecha}*
-
-Por favor envíenme la cotización con precios según los diseños requeridos. ¡Gracias!`;
-
-                // Codificar y redirigir
-                const url = `https://wa.me/5842442208597?text=${encodeURIComponent(mensaje)}`;
-                window.open(url, '_blank', 'noopener,noreferrer');
-                
-                // Limpiar carrito después de enviar
-                setTimeout(() => {
-                    carrito.vaciar();
-                }, 1000);
-                
-                // Cerrar modal
-                dataModalOverlay.classList.remove('active');
-                dataModalOverlay.setAttribute('aria-hidden', 'true');
-                
-                // Mostrar confirmación
-                carrito.mostrarNotificacion("Redirigiendo a WhatsApp...");
-                
-                // Resetear formulario
-                whatsappForm.reset();
-            });
-        }
-
-        // -------------------------------------------------------------
-        // INICIALIZACIÓN
-        // -------------------------------------------------------------
-        document.addEventListener('DOMContentLoaded', () => {
-            renderizarProductos();
-            initScrollAnimation();
-            
-            // Preload de imágenes importantes
-            const logoImg = document.querySelector('.logo img');
-            if (logoImg) {
-                const img = new Image();
-                img.src = logoImg.src;
-            }
-            
-            // Añadir soporte para teclado en botones
-            document.querySelectorAll('.btn, .nav-link, .cart-icon, .hamburger').forEach(btn => {
-                btn.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        btn.click();
-                    }
-                });
-            });
-        });
-
-        // Manejar errores de imágenes
-        document.addEventListener('error', (e) => {
-            if (e.target.tagName === 'IMG') {
-                console.warn('Error cargando imagen:', e.target.src);
-                // Puedes establecer una imagen de respaldo aquí
-            }
-        }, true);
-
-    </script>
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
 </body>
 </html>
